@@ -1,0 +1,31 @@
+syntax = "proto3";
+package Robot;
+
+// Ground truth, estimated, uwb, 
+
+message Point2D {
+  double x = 1;
+  double y = 2;
+}
+
+message Pose2D {
+  double x = 1;
+  double y = 2;
+  double w = 3;
+}
+
+message Twist2D {
+  double v = 1;
+  double w = 2;
+}
+message Path2D {
+  repeated Point2D points = 1;
+}
+
+message Trajectory2D {
+  repeated Pose2D poses = 1;
+}
+
+message Battery {
+  int32 capacity = 1;
+}
